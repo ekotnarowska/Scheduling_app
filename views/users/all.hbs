@@ -1,0 +1,23 @@
+
+<div class='container'>
+<h4 class="mb-4 mt-4">{{title}}</h4>
+<a href="/users/new" class="btn  btn-outline-secondary mt-4"><i class="bi bi-person-plus"></i> Add new user</a>
+<ul class="list-group list-group-horizontal mt-4">
+  <li class="list-group-item d-flex list-group-item-secondary w-25 fw-bold ">First Name</li>
+  <li class="list-group-item d-flex list-group-item-secondary w-25 fw-bold ">Last Name</li>
+  <li class="list-group-item d-flex list-group-item-secondary w-50 fw-bold">Email</li>
+  <li class="list-group-item d-flex list-group-item-secondary w-25 fw-bold">Action</li>
+</ul>
+  {{#each users}}
+    <ul class='list-group list-group-horizontal'>
+        <li class="list-group-item w-25"><a href="/users/{{@index}}" role="button" class="link-secondary text-decoration-none">{{this.firstname}}</a></li>
+        <li class="list-group-item w-25"><a href="/users/{{@index}}" role="button" class="link-secondary text-decoration-none">{{this.lastname}}</a></li>
+        <li class="list-group-item w-50"><a href="/users/{{@index}}" role="button" class="link-secondary text-decoration-none">{{this.email}}</a></li>
+        <li  class="list-group-item d-flex justify-content-between align-items-center w-25">
+          <a href="/users/{{@index}}" class="btn btn-warning" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
+          <a href="/users/{{@index}}/schedules" role="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="All schedules"><i class="bi bi-calendar"></i></a>
+          <a href="#" role="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a></li>
+    </ul>
+ {{/each}}
+ <a href="/" class="btn  btn-outline-secondary mt-4"><i class="bi bi-caret-left-fill"></i> Homepage</a>
+ </div>

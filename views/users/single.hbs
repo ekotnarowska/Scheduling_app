@@ -1,0 +1,22 @@
+<div class='container'>
+    <h4 class="mb-4 mt-4">{{title}}: {{user.firstname}} {{user.lastname}}</h4>
+    <ul class='list-group list-group'>
+        <li class="list-group-item fw-bold  w-50 border-none">User Id:
+            <span class="fw-normal">{{userId}}</span> 
+        </li>
+        <li class="list-group-item fw-bold  w-50 border-none">First Name:
+            <span class="fw-normal">{{user.firstname}}</span> 
+        </li>
+        <li class="list-group-item fw-bold w-50 border-none">Last Name: 
+            <span class="fw-normal">{{user.lastname}}</span> 
+            </li>
+        <li class="list-group-item fw-bold w-50 border-none">Email:
+            <span class="fw-normal">{{user.email}}</span> 
+        </li>
+        <li class="list-group-item fw-bold w-50 border-none">Password:
+            <span class="fw-normal">{{user.password}}</span> 
+        </li>
+    </ul>
+    <a href="/users" class="btn  btn-outline-warning mt-4"> Cancel</a>
+    {{!-- <a href="#" class="btn  btn-success mt-4"> Save</a> --}}
+ </div>
